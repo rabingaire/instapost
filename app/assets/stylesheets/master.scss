@@ -1,0 +1,44 @@
+/* sessions/new.html.erb ===> login pannel */
+
+body {
+	background-color: #fafafa;
+}
+.row  {
+	padding:10% 0 0 0;
+}
+.login-pannel {
+	background-color: #ffffff;
+	width: 350px;
+	height: 310px;
+	border: 1px solid #efefef;
+}
+
+.logo-login {
+	width: 175px;
+	height: 51px;
+	margin: 20px auto 10px;
+}
+
+.input-form {
+	border: 1px solid #dbdbdb;
+	border-radius: 3px;
+	color: #262626;
+	font-size: 14px;
+	padding: 9px 8px 7px;
+	width: 268px;
+	height:33px;
+	margin:0 40px 6px;
+}
+
+.login-button {
+	border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    background: #3897f0;
+    border-color: #3897f0;
+    color: #fff;
+    width: 268px;
+	height:31px;
+}
+
+/* end of style for login pannel */

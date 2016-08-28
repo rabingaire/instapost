@@ -9,7 +9,9 @@
   </head>
 
   <body>
+  <div class="container">
     <nav>
+      <%= link_to 'Home', root_path %>
       <% if user_signed_in? %>
         <%= link_to 'New Post', new_post_path %>
         <%= link_to 'Edit Settings', edit_user_registration_path %>
@@ -20,5 +22,6 @@
       <% end %>
     </nav> 
     <%= yield %>
+  </div>
   </body>
 </html>
