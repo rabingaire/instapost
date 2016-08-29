@@ -1,16 +1,23 @@
-<h2>Forgot your password?</h2>
+<div class="col-md-12 col-xs-12 text-center forget-container">
+<div class="forget-password-pannel">
+<h2 class="logo-instapost">Instapost</h2>
+
+<h4 class="info-signup">Forgot your password?</h4>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, class: 'input-form',placeholder: 'Email' %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <%= f.submit "Send me reset password instructions", class: 'login-button' %>
   </div>
 <% end %>
-
+</div>
+<div class="space"></div>
+<div class="other-links">
 <%= render "devise/shared/links" %>
+</div>
+</div>

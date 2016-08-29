@@ -3,20 +3,31 @@
 body {
 	background-color: #fafafa;
 }
-.row  {
-	padding:10% 0 0 0;
+@media(max-width:992px){
+	.banner-image {
+		display: none;
+	}
 }
+
+.login-container {
+	margin: 8% 0 0 0;
+}
+
 .login-pannel {
 	background-color: #ffffff;
 	width: 350px;
-	height: 310px;
+	height: 270px;
 	border: 1px solid #efefef;
+	margin: 0 auto;
 }
 
-.logo-login {
+.logo-instapost {
 	width: 175px;
 	height: 51px;
 	margin: 20px auto 10px;
+	font-family: 'Grand Hotel', cursive;
+	font-size: 48px;
+	letter-spacing: 3px;
 }
 
 .input-form {
@@ -40,5 +51,87 @@ body {
     width: 268px;
 	height:31px;
 }
-
+.space {
+	width: 350px;
+	margin: 0 auto;
+	height: 10px;
+}
+.other-links {
+	height: 66px;
+	width: 350px;
+	background-color: #ffffff;
+	border: 1px solid #efefef;
+	margin-top: 10px;
+	padding:9px 9px;
+	margin: 0 auto;
+}
 /* end of style for login pannel */
+
+/* registrations/new.html.erb ===> signup pannel */
+
+.signup-container {
+	margin:3% 0 0 0;
+}
+
+.signup-pannel {
+	background-color: #ffffff;
+	width: 350px;
+	height: 480px;
+	border: 1px solid #efefef;
+	margin: 0 auto;
+}
+
+.info-signup {
+	font-size: 17px;
+    line-height: 20px;
+    margin: 0 40px 30px;
+    text-align: center;
+    color: #999;
+    font-weight: 600;
+}
+
+.label-instapost {
+	color: #999;
+}
+
+input[type="file"] {
+	margin:0 auto;
+	color: #999;
+}
+
+.signup-button {
+	border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    background: #3897f0;
+    border-color: #3897f0;
+    color: #fff;
+    width: 268px;
+	height:31px;
+	margin:4% 0 0 0;
+}
+
+.bottom-signup-text {
+	color: #999;
+    margin: 20px 60px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/* end of style for signup pannel */
+
+/* passwords/new.html.erb ===> forgetpassword pannel */
+
+.forget-container {
+	margin:15% 0 0 0;
+}
+
+.forget-password-pannel {
+	background-color: #ffffff;
+	width: 350px;
+	height: 250px;
+	border: 1px solid #efefef;
+	margin: 0 auto;	
+}
+
+/* end of style for forgetpassword pannel */
