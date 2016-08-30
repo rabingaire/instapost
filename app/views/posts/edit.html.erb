@@ -1,8 +1,12 @@
+<div class="col-md-12 text-center">
+	<div class="editpost-pannel">
+		<h2 class="logo-instapost">Instapost</h2>
+		<h4 class="info-editpost">Edit Post</h4>
 
-<h1>Edit Post</h1>
-
-<%= simple_form_for @post do |f| %>
-  <%= f.input :photo %>
-  <%= f.input :description %>
-  <%= f.submit 'Update', class: 'btn btn-default btn-block' %>
-<% end %>
+		<%= simple_form_for @post do |f| %>
+  		<%= f.input :photo %>
+ 			<%= f.input :description, :input_html => { :class => 'editpost-input' } %>
+  		<%= f.submit 'Update', class: 'signup-button' %>
+		<% end %>
+	</div>
+</div>

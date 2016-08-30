@@ -1,6 +1,11 @@
-
-<%= simple_form_for @post do |f| %>
-  <%= f.input :photo %>
-  <%= f.input :description %>
-  <%= f.submit 'Post', class: 'btn btn-default btn-block' %>
-<% end %>
+<div class="col-md-12 text-center">
+	<div class="newpost-pannel">
+		<h2 class="logo-instapost">Instapost</h2>
+		<h4 class="info-newpost">New Post</h4>
+		<%= simple_form_for @post do |f| %>
+  		<%= f.input :photo %>
+  		<%= f.input :description, :input_html => { :class => 'newpost-input' }, placeholder: 'Description...' %>
+  		<%= f.submit 'Post', class: 'signup-button' %>
+		<% end %>
+	</div>
+</div>

@@ -1,11 +1,165 @@
-/* sessions/new.html.erb ===> login pannel */
 
 body {
 	background-color: #fafafa;
 }
+
+.row {
+	margin:0px;
+}
+
+.container-fluid {
+	padding:0px;
+}
+
+.navbar {
+  border-bottom: 1px solid #dbdbdb;
+  background-color: #ffffff;
+  height: 76px;
+}
+
+.navbar-brand {
+	font-family: 'Satisfy', cursive;
+	font-size: 36px;	
+}
+
+.is-navbar {
+	margin-top:15px;
+}
+
+.post {
+	background-color: #ffffff;
+	border: 1px solid #efefef;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.user-info {
+	height: 64px;
+	padding:5px 10px;
+	font-weight: bold;
+}
+
+.dropdown {
+	margin-top: 10px;
+}
+
+.ellipsis {
+	border: none;
+}
+
+.ellipsis:hover {
+	background-color: #FFFFFF;
+}
+
+.user-image {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.user-name {
+	padding-left:10px;
+}
+
+.main-picture  {
+	height: 100%;
+	width: 100%;
+}
+
+.description {
+	padding:15px 20px ;
+}
+
+.bold {
+	font-weight: bolder;
+}
+
+hr {
+	margin: 0px;
+}
+
+.comment {
+	padding:15px 20px;
+}
+
+.delete-comment-button {
+	margin-top: -20px;
+}
+
+.comment-box {
+	margin-left:15px;
+}
+
+.comment-box-input, .comment-box-input:focus {
+	resize: none;
+	border: none;
+	box-shadow: none;
+}
+
+.comment-post-button {
+	float: right;
+	margin-top: -65px;
+	margin-right: 15px;
+}
+
+.post-breaker {
+	margin-bottom: 30px;
+}
+
+
+.settings-pannel {
+	background-color: #ffffff;
+	width: 350px;
+	height: 590px;
+	border: 1px solid #efefef;
+	margin: 0 auto
+}
+
+.other-links-settings {
+	height: 200px;
+	width: 350px;
+	background-color: #ffffff;
+	border: 1px solid #efefef;
+	margin-top: 10px;
+	padding:9px 9px;
+	margin: 0 auto;
+}
+
+.settings-deactivate {
+	border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    background: #E01032;
+    border-color: #E01032;
+    color: #fff;
+    width: 268px;
+	height:31px;
+	margin:4% 0 0 0;
+}
+
+
+/* sessions/new.html.erb ===> login pannel */
 @media(max-width:992px){
 	.banner-image {
 		display: none;
+	}
+
+	navbar-collapse.collapse {
+  		display: block!important;
+	}
+
+	.navbar-nav>li, .navbar-nav {
+  		float: left !important;
+	}
+
+	.navbar-nav.navbar-right:last-child {
+  		margin-right: -15px !important;
+  		margin-top: -45px;
+	}
+
+	.navbar-right {
+  		float: right!important;
 	}
 }
 
@@ -25,9 +179,9 @@ body {
 	width: 175px;
 	height: 51px;
 	margin: 20px auto 10px;
-	font-family: 'Grand Hotel', cursive;
+	font-family: 'Satisfy', cursive;
 	font-size: 48px;
-	letter-spacing: 3px;
+	letter-spacing: 1px;
 }
 
 .input-form {
@@ -99,7 +253,7 @@ input[type="file"] {
 	color: #999;
 }
 
-.signup-button {
+.signup-button, .settings-submit {
 	border-radius: 3px;
     border-style: solid;
     border-width: 1px;
@@ -135,3 +289,34 @@ input[type="file"] {
 }
 
 /* end of style for forgetpassword pannel */
+
+.editpost-pannel, .newpost-pannel {
+	background-color: #ffffff;
+	width: 350px;
+	height: 350px;
+	border: 1px solid #efefef;
+	margin: 0 auto;	
+}
+
+.info-editpost, .info-newpost {
+	color: #999;
+}
+
+.editpost-input, .newpost-input{
+	resize: none;
+	width: 300px;
+	margin: 0 auto;
+}
+
+
+.footer {
+	height: 60px;
+}
+
+.footer p {
+	padding:5% 0 0 0;
+}
+
+.footer a {
+	padding:0 0 2% 0;
+}
