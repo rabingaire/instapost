@@ -8,4 +8,6 @@ class User < ApplicationRecord
 
   has_many :posts, dependent: :destroy
   has_many :comments
+
+  acts_as_voter
 end

@@ -6,7 +6,7 @@
   <div class="post">
     <div class="user-info">
       <%= image_tag post.user.photo, class: 'user-image' %>
-      <%= post.user.name %>
+      <%= link_to user_path(post.user.id) do %><%= post.user.name %><% end %>
       <% if post.user == current_user %>
       <div class="dropdown pull-right">
         <button class="btn btn-default dropdown-toggle ellipsis" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -24,27 +24,31 @@
         <%= image_tag post.photo, class: 'img-responsive main-picture' %>
       </div>
       <div class="description">
+        <div id="likes_counter_<%= post.id %>"><%= render partial: 'likescounter', locals: {post: post} %></div>
         <span class="bold"><%= post.user.name %></span>
         <%= post.description %>
       </div>
       <hr>
       <div class="comment">
         <% post.comments.each do |comment| %>
-  	     <div><span class="bold"><%= comment.user.name %></span> <%= comment.text %></div>
-  	     <% if comment.user == current_user %>
-  		    <%= link_to '', post_comment_path(post_id: post.id, id: comment.id),class: 'pull-right delete-comment-button fa fa-trash-o', method: :delete %>
-  	     <% end %>	
-         <br>	
+        <div><span class="bold"><%= comment.user.name %></span> <%= comment.text %></div>
+         <% if comment.user == current_user %>
+          <%= link_to '', post_comment_path(post_id: post.id, id: comment.id),class: 'pull-right delete-comment-button fa fa-trash-o', method: :delete %>
+         <% end %>  
+         <br> 
         <% end %>
         <hr>
       </div>
     </div>
     <div class="comment-box">
 	  <% if user_signed_in? %>
+      <span id="likes_container_<%= post.id %>">
+        <%= render partial: 'likes', locals: {post: post} %>
+      </span>
   	  <%= simple_form_for Comment.new, url: post_comments_path(post), method: :post do |f| %>
-    	  <%= f.input :text, label: false, placeholder: 'Add a comment...', :input_html => { :class => 'comment-box-input' }  %>
-    	  <%= f.submit 'Post', class: 'btn btn-primary comment-post-button' %>
-  	  <% end %>
+        <%= f.input :text, label: false, placeholder: 'Add a comment...', :input_html => { :class => 'comment-box-input' }  %>
+        <%= f.submit 'Post', class: 'btn btn-primary comment-post-button' %>
+      <% end %>
     <% end %>
     </div>
   </div>
