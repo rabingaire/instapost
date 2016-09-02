@@ -47,5 +47,9 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
-
+  def cache_dir
+    CarrierWave.configure do |config|
+      config.cache_dir = "#{Rails.root}/tmp/uploads"
+    end
+  end
 end

@@ -34,12 +34,12 @@
 <div class="prof_post_box">
 
   <div class="row">
-    <div class="col-xs-3"></div>
+    <div class="col-xs-4"></div>
+    <div class="col-xs-4 my-post-profile">
     <% @user.posts.each do |post| %>
-        <div class="col-xs-3 my-post-profile">
           <%= image_tag post.photo, class: 'prof_show' %>
-        </div>
     <% end %>
-    <div class="col-xs-3"></div>
+    </div>
+    <div class="col-xs-4"></div>
   </div>
 </div>
