@@ -5,7 +5,7 @@
 <div class="post-breaker"></div>
   <div class="post">
     <div class="user-info">
-      <%= image_tag post.user.photo, class: 'user-image' %>
+      <%= cl_image_tag post.user.photo, class: 'user-image' %>
       <%= link_to user_path(post.user.id) do %><%= post.user.name %><% end %>
       <% if post.user == current_user %>
       <div class="dropdown pull-right">
@@ -21,7 +21,7 @@
     </div>
     <div class="post-info">
       <div class="picture img-responsive">
-        <%= image_tag post.photo, class: 'img-responsive main-picture' %>
+        <%= cl_image_tag post.photo, class: 'img-responsive main-picture' %>
       </div>
       <div class="description">
         <div id="likes_counter_<%= post.id %>"><%= render partial: 'likescounter', locals: {post: post} %></div>
@@ -34,8 +34,8 @@
         <div><span class="bold"><%= comment.user.name %></span> <%= comment.text %></div>
          <% if comment.user == current_user %>
           <%= link_to '', post_comment_path(post_id: post.id, id: comment.id),class: 'pull-right delete-comment-button fa fa-trash-o', method: :delete %>
-         <% end %>  
-         <br> 
+         <% end %>
+         <br>
         <% end %>
         <hr>
       </div>
