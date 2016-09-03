@@ -5,7 +5,7 @@
 		<%= simple_form_for @post do |f| %>
   		<%= f.input :photo %>
   		<%= f.input :description, :input_html => { :class => 'newpost-input' }, placeholder: 'Description...' %>
-  		<%= f.submit 'Post', class: 'signup-button' %>
+  		<%= f.submit 'Post', class: 'signup-button', data: {disable_with: "Posting photo..."} %>
 		<% end %>
 	</div>
 </div>
