@@ -1,19 +1,6 @@
----
-development:
-  cloud_name: rabingaire
-  api_key: '193473961772195'
-  api_secret: ROHw1Q_mHPEO0uL7l7kgMmZcv0c
-  enhance_image_tag: true
-  static_image_support: false
-production:
-  cloud_name: rabingaire
-  api_key: '193473961772195'
-  api_secret: ROHw1Q_mHPEO0uL7l7kgMmZcv0c
-  enhance_image_tag: true
-  static_image_support: true
-test:
-  cloud_name: rabingaire
-  api_key: '193473961772195'
-  api_secret: ROHw1Q_mHPEO0uL7l7kgMmZcv0c
-  enhance_image_tag: true
-  static_image_support: false
+Cloudinary.config do |config|
+  config.cloud_name = 'rabingaire'
+  config.api_key = '193473961772195'
+  config.api_secret = 'ROHw1Q_mHPEO0uL7l7kgMmZcv0c'
+  config.cdn_subdomain = true
+end
