@@ -21,7 +21,7 @@
     </div>
     <div class="post-info">
       <div class="picture img-responsive">
-        <%= cl_image_tag post.photo, class: 'img-responsive main-picture' %>
+        <%= image_tag post.photo_url, class: 'img-responsive main-picture' %>
       </div>
       <div class="description">
         <div id="likes_counter_<%= post.id %>"><%= render partial: 'likescounter', locals: {post: post} %></div>
